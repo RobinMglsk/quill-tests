@@ -1,1 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~quill/dist/quill.core.css';
+@import '~quill/dist/quill.bubble.css';
+@import '~quill/dist/quill.snow.css';
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Mirza&family=Roboto&display=swap');
+
+.ql-snow .ql-picker.ql-font .ql-picker-label::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item::before,
+.ql-snow .ql-picker.ql-size .ql-picker-label::before,
+.ql-snow .ql-picker.ql-size .ql-picker-item::before {
+    content: attr(data-value) !important;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="Mirza"]::before {
+    font-family: "Mirza";
+}
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="Roboto"]::before {
+    font-family: "Roboto";
+}
+  
+.ql-font-Mirza {
+    font-family: "Mirza";
+}
+.ql-font-Roboto {
+    font-family: "Roboto";
+}
+
+.ql-picker-options{
+    overflow-y: auto;
+    max-height: 300px;
+    scrollbar-width: thin;
+}
+
+.ql-color .ql-picker-options span{
+    border: 1px solid #333 !important;
+}
+
+.ql-color .ql-picker-options [data-value=custom-color]:before {
+    content: 'Color picker';
+}
+
+.ql-color .ql-picker-options [data-value=custom-color] {
+    background: none !important;
+    width: 100% !important;
+    height: 25px !important;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    border: none !important;
+  }
